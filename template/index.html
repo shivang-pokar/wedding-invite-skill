@@ -104,7 +104,7 @@ section{padding:56px 26px;position:relative}
 .scrollhint{margin-top:26px;font-family:Cinzel,serif;font-size:10px;letter-spacing:4px;color:var(--gold3)}
 .scrollhint i{display:block;margin:6px auto 0;width:10px;height:10px;border-right:2px solid var(--gold3);border-bottom:2px solid var(--gold3);transform:rotate(45deg);animation:bob 1.4s infinite}
 @keyframes bob{50%{transform:translateY(5px) rotate(45deg)}}
-.type::after{content:"|";color:var(--gold);animation:blink .8s infinite}
+.type.typing::after{content:"|";color:var(--gold);animation:blink .8s infinite;font-style:normal}
 .type.done::after{content:""}
 @keyframes blink{50%{opacity:0}}
 
@@ -393,7 +393,7 @@ function petals(n = 40, spread = 4000){
 /* ---------- typewriter ---------- */
 function type(el, text, delay){
   return new Promise(res => setTimeout(() => {
-    let i = 0;
+    let i = 0; el.classList.add("typing");
     const t = setInterval(() => { el.textContent = text.slice(0, ++i); if (i >= text.length) { clearInterval(t); el.classList.add("done"); res(); } }, 110);
   }, delay));
 }
