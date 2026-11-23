@@ -12,7 +12,9 @@ An interactive wedding invite website, made with Claude, that guests open from a
 
 One HTML file. No app, no backend. Hosting can be free (Netlify, GitHub Pages, Cloudflare Pages).
 
-**Live demo:** open [`template/index.html`](template/index.html) in your browser (download it first) and switch to phone view.
+**Live demo (open on your phone):** https://shivang-pokar.github.io/wedding-invite-skill/template/?to=Your%20Name
+
+![Preview](docs/preview.jpg)
 
 ## Make yours
 
